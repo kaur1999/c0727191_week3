@@ -20,9 +20,12 @@ namespace c0727191
         public void InitializeMap()
         {
              Alst = new village();
+            Alst.VillageName = "Alst";
             Maeland = new village();
+            Maeland.VillageName = "Maeland";
             Maeland.isAstrildHere = true;
-            village Schenig = new village();
+            Schenig = new village();
+            Schenig.VillageName = "Schenig";
 
             Alst.NextVillage = Maeland;
             Maeland.NextVillage = Schenig;
@@ -30,7 +33,9 @@ namespace c0727191
         }
         public void WalkAround()
         {
-            village InitialVillage = this.Maeland;
+            village CurrentVillage = this.Maeland;
+            village NextVillage;
+            NextVillage = CurrentVillage.NextVillage;
         }
 
         }    
