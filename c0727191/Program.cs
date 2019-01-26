@@ -19,7 +19,7 @@ namespace c0727191
         village Schenig;
         public void InitializeMap()
         {
-             Alst = new village();
+            Alst = new village();
             Alst.VillageName = "Alst";
             Maeland = new village();
             Maeland.VillageName = "Maeland";
@@ -31,9 +31,13 @@ namespace c0727191
             Maeland.NextVillage = Schenig;
             Schenig.NextVillage = Alst;
         }
-        public void WalkAround()
+        public void FindAstrilde()
         {
             village CurrentVillage = this.Maeland;
+            if (CurrentVillage.isAstrildHere )
+            {
+                Console.WriteLine("hugi found Astrilde!!!celeberations!xoxo");
+            }
             village NextVillage;
             NextVillage = CurrentVillage.NextVillage;
         }
